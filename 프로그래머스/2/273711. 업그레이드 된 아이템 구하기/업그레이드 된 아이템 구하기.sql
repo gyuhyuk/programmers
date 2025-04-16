@@ -3,5 +3,5 @@ FROM ITEM_INFO I
 JOIN ITEM_TREE T ON I.ITEM_ID = T.ITEM_ID
 WHERE T.PARENT_ITEM_ID IN (SELECT ITEM_ID
                             FROM ITEM_INFO
-                            WHERE RARITY = 'RARE')
+                          WHERE RARITY = 'RARE')
 ORDER BY I.ITEM_ID DESC
